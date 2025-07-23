@@ -1,0 +1,175 @@
+@import '../../styles/style.nodule.scss';
+
+
+Section.User {
+    width: 70px;
+
+    article {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        .Img {
+            height: 40px;
+            width: 40px;
+
+            .Notifi {
+                position: absolute;
+                border-radius: 50px;
+                background-color: $color_c1;
+                height: 22px;
+                width: 22px;
+                z-index: 1;
+                margin: 2px 0px 0px -10px;
+                color: white;
+
+                svg {
+                    height: 15px;
+                    margin: 3px 3px;
+                }
+            }
+
+            img {
+                position: relative;
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+                border:1pz solid red;
+            }
+        }
+
+        .checkbox {
+            display: none;
+        }
+
+        label {
+            height: 20px;
+            font-size: 15pt;
+            z-index: 5;
+            cursor: pointer;
+
+            svg:last-child {
+                display: none;
+            }
+        }
+
+        ul.listMenu {
+            z-index: 4;
+            display: none;
+            position: absolute;
+            width: 150px;
+            margin-left: -70px;
+            margin-top: 130px;
+            font-size: 0.7em;
+            padding: 15px 0px 0px 0px;
+            list-style: none;
+            background-color: $color_c1;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgb(77, 77, 77);
+            font-family: $Font_s;
+            font-family: 12pt;
+            padding: 10px 10px 20px 10px;
+
+            img{
+                height: 45px;
+                width: 45px;
+                border-radius: 50px;
+                margin: 10px auto 0px auto;
+            }
+
+            p {
+                color: $color_l1;
+                text-transform: uppercase;
+                font-size: 1.5em;
+                font-weight: bold;
+                margin-top: 5px;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            li {
+                position: relative;
+                padding-left: 10px;
+                // padding: 4.5px 0px 0px 10px;
+                width: 100%;
+                height: 30px;
+                text-align: left;
+                font-weight: 550;
+                font-size: 12pt;
+                cursor: pointer;
+                border-left: 1px solid $color_w;;
+                color: $color_w;
+                margin-top: 10px;
+
+                a {
+                    display: flex;
+                    align-items: center;
+
+                }
+
+                a svg {
+                    margin-right: 10px;
+                    color: $color_l1
+                }
+
+            }
+
+            li:hover {
+                border-left: 2px solid $color_l1;
+                color: $color_l1;
+            }
+        }
+
+        ul.listMenu::before {
+            content: '';
+            position: absolute;
+            top: -17px;
+            left: 40px;
+            right: 0px;
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            transform: rotate(270deg);
+        }
+
+
+        // div.User ul.listMenu li a svg {
+        //     margin-right: 10px;
+        // }
+
+        // div.User ul.listMenu li:hover {
+        //     border-left: 2px solid var(--cor--verde);
+        //     color: var(--cor--verde);
+        // }
+
+        .checkbox:checked~.listMenu {
+            display: block;
+        }
+
+        .checkbox:checked~label>.IconOpen {
+            display: none;
+        }
+
+        .checkbox:checked~label>.IconClose {
+            display: block !important;
+            color: $color_l1 !important;
+            margin-right: 10px !important;
+            border-radius: 50px;
+
+
+        }
+    }
+
+
+
+
+}
+
+
+@media (max-width: 430px) {
+    Section.User {
+        margin-top: -50px;
+    }
+}

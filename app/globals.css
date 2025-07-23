@@ -1,26 +1,147 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #292929;
     --foreground: #ededed;
   }
 }
 
 body {
+  /* color: var(--foreground); */
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-y: none;
+  overflow-x: none;
+  /* font-family: Arial, Helvetica, sans-serif; */
 }
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+html,
+body {
+
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+
+}
+
+body {
+  /* background: rgb(0,0,0);
+  background: linear-gradient(178deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 52%); */
+}
+
+header {
+  /* height: 20%;
+  border:1px solid red */
+
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+
+main section.agenda {
+  padding: 10px;
+  width: 70%;
+  margin: 0px auto;
+}
+
+main section.dashboard {
+  width: 100%;
+  margin-top: 50px;
+  background-color: #FA840F;
+  padding: 20px;
+  box-shadow: 2px -10px 20px #000000;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+
+@media screen and (min-width: 1000px) {
+
+}
+
+@media screen and (min-width: 1000px) {
+  main section.agenda {
+    width: 50%;
+    margin: 0px auto;
+    /* border: 1px solid blue; */
+
+  }
+  main section.dashboard{
+    width: 40%;
+    background-color: transparent;
+    box-shadow: none;
+    
+  }
+}
+
+
+
+
+/* @media screen and (min-width: 500px ) {
+  /* main section.agenda{
+    width: 80%;
+    margin: 0px auto;
+        border:1px solid blue;
+
+  }
+}
+@media screen and (min-width: 700px ) {
+  /* main section.agenda{
+    width: 60%;
+    
+  }
+}
+
+
+@media screen and (min-width: 725px ) {
+  main section.agenda{
+    padding: 0px 50px;
+    
+  }
+}
+
+@media screen and (min-width: 1000px ) {
+  main{
+   margin: 35px auto;
+   
+  }
+  main section.agenda{
+    width: 50%;
+    padding: 0px 50px;
+        border:1px solid red;
+  }
+
+  main section.dashboard{
+    width: 50%;
+    background-color: transparent;
+    box-shadow: none;
+    
+  }
+} */

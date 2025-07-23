@@ -1,0 +1,97 @@
+@import '../../styles/style.nodule.scss';
+
+
+.footer {
+  // bottom: 0;
+  position: absolute;
+  width: 100%;
+  // height: 20%;
+  background-color: $color_c1;
+  font-family: $Font_s;
+  //box-shadow: 2px -10px 20px #000000;
+
+
+  section.InforBarber {
+    padding: 30px;
+    text-align: center;
+    font-size: 12pt;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+
+    .Img {
+      height: 100%;
+      width: 20%;
+
+      img {
+        bottom: 0;
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        margin-left: -80px;
+      }
+    }
+
+    .Info {
+      height: 100%;
+      width: 80%;
+      text-align: center;
+
+      h3 {
+        font-size: 1.3em;
+        color: $color_l1;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 0.8em;
+        color: white;
+      }
+
+    }
+
+  }
+
+
+  section.InfoSist {
+    padding: 5px 20px;
+    font-family: $Font_s;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 12pt;
+    text-transform: uppercase;
+
+    h5 {
+      text-align: right ;
+      width: 100%;
+      color: rgb(124, 124, 124);
+    }
+  }
+  
+}
+@media screen and (min-width: 400px ) and (max-width: 410px){
+  section.InforBarber {
+    .Img {
+      img {
+         margin-left: 20px !important;
+      }
+    }
+    
+  }
+
+}
+@media screen and (min-width: 725px ) {
+  section.InforBarber {
+    .Img {
+      img {
+         margin-left: 50px !important;
+      }
+    }
+    .Info {
+      width: 100%!important;
+    }
+  }
+}

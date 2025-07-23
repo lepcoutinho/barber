@@ -1,0 +1,192 @@
+@import '../../styles/style.nodule.scss';
+
+
+section.Dashboard {
+    height: 300px;
+    margin-top: -50px;
+    margin: -50px auto 0px auto;
+    background-color: $color_w;
+    border-radius: 20px;
+    box-shadow: 0px -2px 20px #222222;
+    font-family: $Font_s;
+    width: 325px;
+
+    section.Title {
+        padding: 25px 10px 5px 10px;
+        font-size: 12pt;
+        display: flex;
+
+        div {
+
+            width: 150px;
+            margin: 0px auto;
+            display: flex;
+
+            svg {
+                height: 25px;
+                width: 25px;
+                color: $color_l1
+            }
+
+            h4 {
+                text-transform: uppercase;
+                font-size: 1.2em;
+                font-weight: bold;
+                color: $color_c1;
+            }
+
+        }
+
+    }
+
+    section.Infos {
+        div {
+            width: 90%;
+            height: 60px;
+            margin: 20px auto 0px auto;
+            display: flex;
+            justify-content: space-around;
+
+            article {
+                width: 48%;
+                height: 100%;
+                background-color: $color_c2;
+                border-radius: 10px;
+                padding: 0px 10px;
+                display: flex;
+                align-items: center;
+                font-size: 12pt;
+                
+                div:first-child {
+                    width: 40%;
+                    height: 50px;
+                    padding: 0px;
+                    h3 {
+                        margin-top: -3px;
+                        display: block;
+                        font-size: 2.4em;
+                        color: $color_l1;
+                        font-weight: bold;
+                    }
+
+                }
+
+                div:last-child {
+                    width: 60%;
+                    height: 40px;
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    text-transform: uppercase;
+
+                    h4 {
+                        display: block;
+                        font-size: 1em;
+                        color: $color_l1;
+                        font-weight: bold;
+                        width: 100%;
+                        height: 25px;
+
+                    }
+
+                    p {
+                        display: block;
+                        font-size: 0.9em;
+                        width: 100%;
+                        height: 30px;
+                        margin-top: -5px;
+                        color: $color_w;
+
+                        span {}
+
+                        @media screen and (min-width: 413px) and (max-width: 470px) {
+                            span {
+                                display: none;
+                            }
+                        }
+                    }
+
+                }
+
+                div {
+                    margin: 0px;
+                }
+
+
+                @media screen and (min-width: 360px) and (max-width: 560px) {
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+    }
+
+    section.Contator {
+        width: 90%;
+        margin: 20px auto 10px auto;
+
+        div:first-child {
+            h4 {
+                font-size: 12pt;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+
+        div:last-child {
+            display: flex;
+
+            article {
+
+                height: 60px;
+                width: 70px;
+                margin: 5px;
+
+                img {
+                    height: 40px;
+                    width: 43px;
+                    margin: 0px auto;
+
+                }
+
+                p {
+                    font-size: 10pt;
+                    text-transform: uppercase;
+                }
+
+                div {
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 50px;
+                    display: inherit;
+                    position: absolute;
+                    margin-top: -48px;
+                    margin-left: 50px;
+                    z-index: 1;
+                    background-color: #222222;
+                    color: white;
+
+                    p {
+                        margin-top: -1px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 450px ) {
+    section.Dashboard {
+        width: 380px;
+    }
+  }
+
+  @media screen and (min-width: 725px ) {
+    section.Dashboard {
+        width: 400px;
+    }
+  }

@@ -1,0 +1,393 @@
+@import '../../styles/style.nodule.scss';
+
+
+.actions {
+    margin-top: -25px;
+    height: 110px;
+    width: 100%;
+    overflow-y: hidden;
+    padding-right: 15px;
+    overflow-x: scroll;
+   
+    .frame {
+        width: 600px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        article {
+            height: 75px;
+            width: 80%;
+            border-radius: 10px 20px 10px 20px;
+            background-color: $color_w;
+            padding: 15px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0px 5px;
+            box-shadow: 0px 5px 10px rgb(14, 14, 14);
+        }
+
+        article.Person {
+
+            div:first-child {
+                width: 69%;
+                height: 100%;
+                font-size: 17pt;
+                font-family: $Font_s;
+                font-weight: 700;
+                
+
+                h4:first-child {
+                    margin-top: 4px;
+
+                    span {
+                        color: $color_l1
+                    }
+
+                }
+
+                h4:last-child {
+                    margin-top: -30px;
+                }
+
+            }
+
+            div:last-child {
+                width: 30%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                button {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    border:none;
+                    background-color: $color_c1;
+                    svg {
+                        height: 100%;
+                        width: 100%;
+                        color: white;
+                        //background-color: $color_c1;
+                        border-radius: 50px;
+                        //padding: 3px;
+                        //margin: 0px auto;
+                    }
+
+
+                }
+            }
+
+        }
+
+        article.Equipe {
+            div:first-child {
+                width: 100%;
+                font-size: 11pt;
+                font-family: $Font_s;
+                padding-bottom: 15px;
+                font-weight: 700;
+
+                h4:first-child {
+                    margin-top: -5px;
+                    text-transform: uppercase;
+                }
+
+            }
+
+            div:last-child {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: -5px;
+
+                button {
+                    margin-top: -45px;
+                    height: 40px;
+                    width: 40px;
+                    display: block;
+                    text-align: center;
+                    
+                    border: none;
+                    border-radius: 50%;
+
+                    svg {
+                        height: 100%;
+                        width: 100%;
+                    }
+
+                    p {
+
+                        margin-top: 40px;
+                        text-transform: uppercase;
+                        font-size: 10pt;
+                    }
+                }
+            }
+        }
+
+    }
+
+    @media screen and (min-width: 600px) {
+        .frame {
+            margin: 0px auto;
+        }
+    }
+
+}
+
+
+.modal_overlay {
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(43, 43, 43, 0.568);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .Modal section.ModalWindow {
+        width: 360px;
+        height: 580px;
+        margin: 0 auto 0px auto;
+        border-radius: 8px;
+        background-color: rgb(36, 36, 36);
+        transition: margin-top 1s;
+        box-shadow: 5px 5px 20px rgb(29, 29, 29);
+        padding: 20px;
+
+
+
+        header {
+            width: 100%;
+            display: flex;
+
+            div.Title {
+                width: 70%;
+                height: 60px;
+                display: flex;
+                align-items: center;
+
+                svg {
+                    height: 30px;
+                    width: 30px;
+                    color: $color_l1;
+                    padding: 3px;
+                }
+
+                h2 {
+                    font-size: 15pt;
+                    line-height: 30px;
+                    text-transform: uppercase;
+                    font-family: $Font_s;
+                    color: $color_w;
+                }
+            }
+
+            div.Action {
+                width: 30%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                button.Close {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50px;
+                    height: 30px;
+                    width: 30px;
+                    background-color: $color_l1;
+                    margin-right: -65px;
+                }
+            }
+        }
+
+
+        section.SelCliente {
+            margin-top: 30px;
+
+            .Select {
+                border-bottom: 1px solid $color_w;
+                display: flex;
+
+                label {
+                    color: white;
+                    text-transform: uppercase;
+                    font-size: 10pt;
+                    float: left;
+                    width: 300px;
+                }
+
+                svg {
+                    float: right;
+                    color: $color_w;
+                    display: none;
+                }
+
+                .Item {
+                    margin-top: 12px;
+                    margin-left: 10px;
+                    background-color: $color_l1 ;
+                    border-radius: 50px;
+                    width: 150px;
+                    height: 30px;
+                    padding: 0px;
+                    text-align: center;
+
+                    span {
+                        float: left;
+                        width: 100%;
+                        margin-top: -6px;
+                        text-transform: uppercase;
+                        //font-weight: 500;
+
+                    }
+                }
+
+
+
+            }
+        }
+
+        section {
+            margin-top: 20px;
+
+            h3 {
+                text-transform: uppercase;
+                color: $color_w;
+                font-size: 11pt;
+            }
+        }
+
+        section.SelServico {
+            border-bottom: 1px solid $color_w;
+            padding-bottom: 10px;
+
+            div.Servico {
+                padding: 10px 0px;
+                height: 150px;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-row-gap: 1px;
+
+            }
+
+            p {
+                text-align: right;
+                font-size: 15pt;
+                color: $color_w;
+            }
+
+        }
+
+        section.Fidelidade {
+
+            div.Fidelidade {
+                margin: 10px auto 0px auto;
+                width: 90%;
+
+
+                div.Ponto {
+                    display: flex;
+                    justify-content: space-between;
+
+                    div {
+                        height: 25px;
+                        width: 25px;
+                        background: rgba(129, 129, 129, 0.5);
+                        border-radius: 6px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: $color_l1;
+                    }
+                }
+            }
+        }
+
+        footer {
+            margin-top: 20px;
+
+            button {
+                display: block;
+                margin: 0px auto 0px auto;
+                border: 1px solid $color_l1;
+                border-radius: 50px;
+                height: 35px;
+                width: 90px;
+                text-transform: uppercase;
+                background-color: transparent;
+                color: $color_l1;
+
+            }
+
+            :hover {
+
+                background-color: $color_l1;
+                color: $color_c1;
+
+            }
+        }
+
+    }
+
+}
+
+
+.SelectItem {
+    border: 1px solid $color_l1;
+    background-color: $color_c2;
+    border-radius: 10px;
+    width: 190px;
+    padding: 5px 0px 5px 15px;
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 5px 10px rgb(14, 14, 14);
+
+    p {
+        text-transform: uppercase;
+        font-size: 12pt;
+        color: white;
+    }
+
+    p:first-child {
+        font-weight: bold;
+    }
+
+    p:last-child {
+        margin-top: -5px;
+        font-weight: 400;
+    }
+
+    .Item {
+        width: 125px;
+    }
+
+    svg {
+        height: 30px;
+        width: 30px;
+        float: right;
+        color: $color_l1;
+    }
+
+
+}
+
+
+.SelectItem:hover {
+
+    background-color: $color_l1;
+
+    svg {
+        color: white;
+    }
+}

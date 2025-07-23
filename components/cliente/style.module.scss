@@ -1,0 +1,307 @@
+@import '../../styles/style.nodule.scss';
+
+
+article.Cliente {
+    width: 300px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(32, 32, 32);
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgb(51, 51, 51);
+    margin: 0px auto;
+    cursor: pointer;
+
+    div.Dados {
+        width: 60%;
+        height: 60px;
+        padding-left: 15px;
+        text-transform: uppercase;
+        font-size: 12pt;
+        font-family: $Font_s;
+        color: $color_w;
+
+        h3 {
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+    }
+
+    div.Fidelidade {
+        width: 40%;
+
+
+        div.Ponto {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-row-gap: 5px;
+
+            div {
+                height: 25px;
+                width: 25px;
+                background: rgba(129, 129, 129, 0.5);
+                border-radius: 6px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $color_l1;
+            }
+        }
+    }
+}
+
+
+.modal_overlay {
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(43, 43, 43, 0.568);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .Modal div.ModalWindow {
+        width: 360px;
+        height: 580px;
+        margin: 0 auto 0px auto;
+        border-radius: 8px;
+        background-color: rgb(36, 36, 36);
+        transition: margin-top 1s;
+        box-shadow: 5px 5px 20px rgb(29, 29, 29);
+        padding: 20px;
+
+
+        div.Actions {
+            height: 30px;
+            width: 130px;
+            float: right;
+            display: flex;
+            
+
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50px;
+                border: 1px solid $color_l1;
+            }
+
+            button.Edit {
+                width: 90px;
+                height: 30px;
+                color: $color_l1;
+            }
+
+            button.Edit:hover {
+                background-color: $color_l1;
+                color: rgb(36, 36, 36);
+            }
+
+            button.Close {
+                position: relative;
+                height: 30px;
+                width: 30px;
+                background-color: $color_l1;
+                margin-left: 10px;
+            }
+            button.Close:hover {
+                background-color: transparent;
+                color: $color_l1;
+            }
+        }
+
+
+
+
+
+
+        section {
+            width: 90%;
+            margin: 20px auto 0px auto;
+
+            h4 {
+                text-transform: uppercase;
+                font-size: 1.1em;
+                font-weight: 600;
+                color: $color_w;
+            }
+        }
+
+        section.Dados {
+            font-size: 12pt;
+            margin-top: 45px;
+
+
+
+            div {
+                margin-top: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+
+
+
+                h3 {
+                    text-transform: uppercase;
+                    font-size: 3em;
+                    font-weight: 600;
+                    font-family: $Font_s;
+                    color: $color_w;
+                    line-height: 60px;
+                }
+
+                svg {
+                    color: $color_l1;
+                    // width: 20px;
+                }
+
+                p {
+                    display: block;
+                    margin-left: 8px;
+                    margin-top: -5px;
+                    color: $color_w;
+                    text-transform: uppercase;
+                    width: 80%;
+                    font-size: 1em;
+                }
+
+                input {
+                    margin-left: 8px;
+                    margin-top: -5px;
+                    background-color: transparent;
+                    border: none;
+                    color: $color_w;
+                    text-transform: uppercase;
+                    font-size: 1em;
+                    border-bottom: 1px solid white;
+                    width: 91%;
+                }
+
+
+                textarea {
+                    resize: none;
+                    width: 80%;
+                    height: 96px;
+                    box-sizing: border-box;
+                    font-size: 2.0em;
+                    word-break: keep-all;
+                    text-transform: uppercase;
+                    background-color: transparent;
+                    word-break: break-all;
+                    font-family: $Font_s;
+                    color: $color_w;
+                    line-height: 35px;
+
+                }
+
+                div.Endereco {
+                    width: 94%;
+                    margin-top: -5px;
+                    display: flex;
+
+                    input {
+                        margin-top: 5px;
+                    }
+
+                    input:nth-child(1) {
+                        width: 100%;
+                    }
+
+                    input:nth-child(2) {
+                        width: 40%;
+                    }
+
+                    input:nth-child(3) {
+                        width: 35%;
+                    }
+
+                    select:nth-child(4) {
+                        width: 17%;
+                        background: transparent;
+                        color: white;
+                        height: 31px;
+                        margin-left: 5px;
+                        border-bottom: 1px solid white;
+
+                        option {
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+
+        section.Servicos {
+
+            div {
+                // border:1px solid black;
+                margin-top: 10px;
+                display: flex;
+
+                article {
+                    height: 40px;
+                    width: 40px;
+                    text-align: center;
+
+                    img {
+                        height: 35px;
+                        width: 35px;
+                        margin: 0px auto;
+                    }
+
+                    p {
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+
+        }
+
+        section.Fidelidade {
+            div.Fidelidade {
+                width: 100%;
+                margin-top: 10px;
+
+
+                div.Ponto {
+                    display: flex;
+                    justify-content: space-between;
+
+                    div {
+                        height: 25px;
+                        width: 25px;
+                        background: rgba(129, 129, 129, 0.5);
+                        border-radius: 6px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: $color_l1;
+                    }
+                }
+            }
+        }
+
+        button.Save {
+            width: 90px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid;
+            color: $color_l1;
+            border-radius: 50px;
+            position: absolute;
+            bottom: 50px;
+            margin-left: 115px;
+        }
+        button.Save:hover {
+            background-color: $color_l1;
+            color: rgb(36, 36, 36);
+        }
+    }
+}
