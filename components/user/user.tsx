@@ -11,8 +11,6 @@ import {
   GrMoreVertical,
   GrClose,
   GrLogout,
-  // GrConfigure,
-  // GrPieChart
 } from "react-icons/gr";
 
 const User = () => {
