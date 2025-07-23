@@ -44,10 +44,6 @@ const SelectDate = ({handlePer}:any) => {
         handlePer(novaData)
     }
 
-
-
-
-
     return (
         <section className={style.Date}>
             <div className={style.SelectDate}>
